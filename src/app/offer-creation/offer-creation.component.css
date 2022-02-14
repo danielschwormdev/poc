@@ -1,0 +1,31 @@
+.container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 150px 150px 150px 150px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.radio-button {
+  margin: 5px;
+}
+
+a {
+  color: #1b3566;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.button {
+  width: 210px;
+}

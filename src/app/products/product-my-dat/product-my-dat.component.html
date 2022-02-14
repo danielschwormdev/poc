@@ -1,0 +1,76 @@
+<div class="card border">
+  <div class="trash triangle">
+    <mat-icon>delete</mat-icon>
+  </div>
+  <h1 class="card-header">myDAT</h1>
+  <div class="card-content">
+    <h3>BDV-Nutzer festlegen:</h3>
+    <div class="form-container">
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Vorname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="myDATDetails.bdvUser.firstName"
+          (ngModelChange)="setMyDATDetails($event, 'bdvUser.firstName')"
+          placeholder="Vorname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Nachname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="myDATDetails.bdvUser.lastName"
+          (ngModelChange)="setMyDATDetails($event, 'bdvUser.lastName')"
+          placeholder="Nachname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>E-Mail-Adresse</mat-label>
+        <input
+          matInput
+          [(ngModel)]="myDATDetails.bdvUser.email"
+          (ngModelChange)="setMyDATDetails($event, 'bdvUser.email')"
+          placeholder="E-Mail-Adresse"
+        />
+      </mat-form-field>
+    </div>
+    <h3>Standardnutzer hinzufügen:</h3>
+    <div class="form-container">
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Vorname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="myDATDetails.standardUser.firstName"
+          (ngModelChange)="setMyDATDetails($event, 'standardUser.firstName')"
+          placeholder="Vorname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Nachname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="myDATDetails.standardUser.lastName"
+          (ngModelChange)="setMyDATDetails($event, 'standardUser.lastName')"
+          placeholder="Nachname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>E-Mail Adresse</mat-label>
+        <input
+          matInput
+          [(ngModel)]="myDATDetails.standardUser.email"
+          (ngModelChange)="setMyDATDetails($event, 'standardUser.email')"
+          placeholder="E-Mail Adresse"
+        />
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    <button mat-flat-button class="grey-button">
+      weiteren Nutzer anlegen <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+  <p class="extra-info">Zusatzinformationen anzeigen</p>
+</div>

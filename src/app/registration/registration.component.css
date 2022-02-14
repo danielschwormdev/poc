@@ -1,0 +1,50 @@
+.container {
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.registration {
+  max-width: 40%;
+  margin-bottom: 30px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.info-text {
+  color: #1b3566;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container button:last-of-type {
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.button {
+  width: 120px;
+}
+
+.existing-account {
+  color: #1b3566;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-top: 25px;
+  border-style: none;
+  text-decoration: none;
+}
+
+.last {
+  display: flex;
+  justify-content: space-between;
+}

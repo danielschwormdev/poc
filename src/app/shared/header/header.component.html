@@ -1,0 +1,21 @@
+<mat-toolbar id="mainToolbar" color="primary">
+  <img
+    class="DAT_Logo"
+    src="../../assets/DAT_Logo.png"
+    alt="DAT Logo"
+    routerLink="/start-page"
+  />
+  <div>
+    <h4>Angebotskonfigurator</h4>
+    <p>Herzlich Willkommen, Max Mustermann</p>
+  </div>
+  <span class="toolbar_spacer"></span>
+  <button class="button triangle" matTooltip="Abmelden">Abmelden</button>
+</mat-toolbar>
+
+<mat-sidenav-container id="sidenavContainer" fullscreen>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

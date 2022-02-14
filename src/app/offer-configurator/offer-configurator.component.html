@@ -1,0 +1,112 @@
+<div class="container">
+  <a routerLink="/offer-creation">&#x2039; Zurück zur Angebotsauswahl</a>
+  <h1>Angebotskonfigurator</h1>
+  <div class="parent">
+    <div class="div1">
+      <h3>Angebot für:</h3>
+      <p>
+        {{ getCustomerData.company }} <br />
+        {{ getCustomerData.firstName }} {{ getCustomerData.lastName }}<br />
+        {{ getCustomerData.addresses[0].street }}
+        {{ getCustomerData.addresses[0].streetNumber }}
+        <br />
+        {{ getCustomerData.addresses[0].zipCode }}
+        {{ getCustomerData.addresses[0].city }} <br /><br />
+        {{ getCustomerData.contactPhone }}<br />
+        {{ getCustomerData.contactEmail }}
+      </p>
+    </div>
+    <div class="div2">
+      <h3>Wählen Sie die gewünschten Pakete:</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Fabrikatsvertretung / Organisation</mat-label>
+        <mat-select [(ngModel)]="status">
+          <mat-option
+            *ngFor="let organisation of organisations"
+            [value]="organisation"
+            >{{ organisation }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <section>
+        <p>
+          <mat-checkbox id="I2" [disabled]="status != '' ? false : true"
+            >MyDAT</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="I1" [disabled]="status != '' ? false : true"
+            >autoglas PLUS</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="1" [disabled]="status === 'Audi' ? false : true">
+            SilverDAT 3 bundlePro</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="2" [disabled]="status === 'BMW' ? false : true"
+            >SilverDAT 3 valuatePro</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="I3" [disabled]="status != '' ? false : true"
+            >SilverDAT 3 calculatePro</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="9" [disabled]="status != '' ? false : true"
+            >SilverDAT Expert Pauschale</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="3" [disabled]="status === 'BMW' ? false : true"
+            >SilverDAT New Generation</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="4" [disabled]="status === 'Audi' ? false : true"
+            >SilverDAT myClaimPRO</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox
+            id="5"
+            [disabled]="status === 'Mercedes-Benz' ? false : true"
+            >SilverDAT calculateGlass</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox
+            id="6"
+            [disabled]="status === 'Mercedes-Benz' ? false : true"
+            >SilverDAT valuateBasic</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="I4" [disabled]="status != '' ? false : true"
+            >VIN-Abfrage</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="7" [disabled]="status === 'Audi' ? false : true"
+            >Zusatzvereinbarung</mat-checkbox
+          >
+        </p>
+        <p>
+          <mat-checkbox id="8" [disabled]="status === 'Audi' ? false : true"
+            >Option</mat-checkbox
+          >
+        </p>
+      </section>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <button
+    class="button triangle"
+    routerLink="/offer-configurator-overview"
+    (click)="setChecked()"
+  >
+    Weiter &#x203A;
+  </button>
+</div>

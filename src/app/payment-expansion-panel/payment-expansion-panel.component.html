@@ -1,0 +1,70 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>SEPA Lastschrift</mat-panel-title>
+      <img src="../../assets/sepa.png" class="sepa" alt="" />
+    </mat-expansion-panel-header>
+    <mat-form-field appearance="outline">
+      <mat-label>IBAN</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Kontoinhaber</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">
+        Andere Zahlungsart
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Paypal</mat-panel-title>
+      <img src="../../assets/paypal.png" class="sepa" alt="" />
+    </mat-expansion-panel-header>
+    <button mat-flat-button>Zu Paypal</button>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">
+        SEPA Lastschrift
+      </button>
+      <button mat-button color="primary" (click)="nextStep()">
+        Andere Zahlungsart
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Kreditkarte</mat-panel-title>
+      <img src="../../assets/mastercard.png" class="mastercard" alt="" />
+      <img src="../../assets/visa.png" class="visa" alt="" />
+    </mat-expansion-panel-header>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Paypal</button>
+      <button mat-button color="primary" (click)="nextStep()">
+        Andere Zahlungsart
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Rechnung</mat-panel-title>
+      <img src="../../assets/invoice.png" class="invoice" alt="" />
+    </mat-expansion-panel-header>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Kreditkarte</button>
+      <button mat-button color="primary" (click)="nextStep()">
+        Andere Zahlungsart
+      </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Vorkasse</mat-panel-title>
+      <img src="../../assets/vorkasse.png" class="vorkasse" alt="" />
+    </mat-expansion-panel-header>
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Rechnung</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

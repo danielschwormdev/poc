@@ -1,0 +1,34 @@
+.toolbar_spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar .mat-primary {
+  background: #1b3566;
+}
+
+.DAT_Logo {
+  cursor: pointer;
+  margin: 45px 10px 0 50px;
+  width: 60px;
+  height: 95px;
+}
+
+.button {
+  color: #fff;
+  background: #24bced;
+  margin-top: 20px;
+  width: 120px;
+}
+
+.button.triangle:after {
+  background-color: #24bced;
+}
+
+mat-toolbar p {
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+mat-toolbar h4 {
+  margin-top: 25px;
+}

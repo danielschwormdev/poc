@@ -1,0 +1,118 @@
+<div class="card border">
+  <div class="trash triangle">
+    <mat-icon>delete</mat-icon>
+  </div>
+  <h1 class="card-header">SilverDAT calculatePRO</h1>
+  <div class="card-content">
+    <h3>Betriebsstätten Lizenznehmer:</h3>
+    <div class="form-container">
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Bezeichnung</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.licenceUser.title"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'licenceUser.title')
+          "
+          placeholder="Bezeichnung"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Ort</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.licenceUser.place"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'licenceUser.place')
+          "
+          placeholder="Ort"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Telefonnummer</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.licenceUser.phone"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'licenceUser.phone')
+          "
+          placeholder="Telefonnummer"
+        />
+      </mat-form-field>
+    </div>
+    <h3>Ansprechpartner</h3>
+    <div class="form-container">
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Vorname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.contactPartner.firstName"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'contactPartner.firstName')
+          "
+          placeholder="Vorname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Nachname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.contactPartner.lastName"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'contactPartner.lastName')
+          "
+          placeholder="Nachname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>E-Mail Adresse</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.contactPartner.email"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'contactPartner.email')
+          "
+          placeholder="E-Mail Adresse"
+        />
+      </mat-form-field>
+    </div>
+    <h3>Administrator</h3>
+    <div class="form-container">
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Vorname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.administrator.firstName"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'administrator.firstName')
+          "
+          placeholder="Vorname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Nachname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.administrator.lastName"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'administrator.lastName')
+          "
+          placeholder="Nachname"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>E-Mail Adresse</mat-label>
+        <input
+          matInput
+          [(ngModel)]="silverDATCalculateProDetails.administrator.email"
+          (ngModelChange)="
+            setSilverDATCalculateProDetails($event, 'administrator.email')
+          "
+          placeholder="E-Mail Adresse"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <p class="extra-info">Zusatzinformationen anzeigen</p>
+</div>

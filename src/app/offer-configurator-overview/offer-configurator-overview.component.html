@@ -1,0 +1,82 @@
+<div class="container">
+  <a routerLink="/offer-configurator">&#x2039; Schritt zurück</a>
+  <h1>Angebotskonfigurator</h1>
+  <h3>Angebot für:</h3>
+  <p>
+    {{ getCustomerData.company }} <br />
+    {{ getCustomerData.firstName }} {{ getCustomerData.lastName }}<br />
+    {{ getCustomerData.addresses[0].street }}
+    {{ getCustomerData.addresses[0].streetNumber }}
+    <br />
+    {{ getCustomerData.addresses[0].zipCode }}
+    {{ getCustomerData.addresses[0].city }} <br /><br />
+    {{ getCustomerData.contactPhone }}<br />
+    {{ getCustomerData.contactEmail }}
+  </p>
+  <app-product-autoglas-plus *ngIf="component1"></app-product-autoglas-plus>
+  <app-product-my-dat *ngIf="component2"></app-product-my-dat>
+  <app-product-silver-dat-calculate-pro
+    *ngIf="component3"
+  ></app-product-silver-dat-calculate-pro>
+  <app-product-vin-abfrage *ngIf="component4"></app-product-vin-abfrage>
+  <div class="parent">
+    <div class="div1">
+      <h3>Weiterer Baustein</h3>
+      <p>
+        <mat-checkbox>autoglasPlus</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox>MyDat</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox>SilverDAT calculatePRO</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox [disabled]="true">VIN-Abfrage</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox [disabled]="true">Transaktionen</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox [disabled]="true">Einrichtungspauschale</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox>Zusatzuser</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox>AZT Lack</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox>Fairgarage</mat-checkbox>
+      </p>
+      <p>
+        <mat-checkbox>Ratenzahlung möglich</mat-checkbox>
+      </p>
+    </div>
+    <div class="div2">
+      <div class="note-card note-border">
+        <h1 class="note-card-header">Hinweis zum aktuellen Angebot:</h1>
+        <div class="note-card-content">
+          <p>
+            Das Angebot kann durch den zusätzlichen Baustein "Bausteinname X"
+            einen Gesamtrabatt von XX% erhalten.
+          </p>
+          <button mat-flat-button class="grey-button">
+            Bausteinname X hinzufügen <mat-icon>add</mat-icon>
+          </button>
+          <p>
+            Das Angebot kann durch den zusätzlichen Baustein "Bausteinname X"
+            einen Gesamtrabatt von XX% erhalten.
+          </p>
+          <button mat-flat-button class="grey-button">
+            Bausteinname X hinzufügen <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <button class="button triangle" routerLink="/offer-overview">
+    Weiter &#x203A;
+  </button>
+</div>

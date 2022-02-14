@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>Ihr Angebot vom 11.02.2021</h1>
+  <div class="parent">
+    <div class="div1">
+      <p>
+        {{ getCustomerData.company }} <br />
+        {{ getCustomerData.firstName }} {{ getCustomerData.lastName }}<br />
+        {{ getCustomerData.addresses[0].street }}
+        {{ getCustomerData.addresses[0].streetNumber }}
+        <br />
+        {{ getCustomerData.addresses[0].zipCode }}
+        {{ getCustomerData.addresses[0].city }} <br /><br />
+        {{ getCustomerData.contactPhone }}<br />
+        {{ getCustomerData.contactEmail }}
+      </p>
+    </div>
+    <div class="div2">
+      <div class="note-card note-border">
+        <h1 class="note-card-header">Hilfe und Kontakt</h1>
+        <div class="note-card-content">
+          <p>
+            Sie haben Rückfragen oder Anmerkungen zu diesem Angebot? Melden Sie
+            sich gerne bei Ihrem persönlichen Ansprechpartner
+          </p>
+          <p>Ihr Ansprechpartner:</p>
+          <h3>Maximilian Mustermann</h3>
+          <p>Email: maximilian.mustermann@dat.de</p>
+          <p>+49 711 / 12 45 56</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <app-product-in-cart-autoglas-plus
+      *ngIf="component1"
+    ></app-product-in-cart-autoglas-plus>
+  </div>
+  <div>
+    <app-product-in-cart-my-dat *ngIf="component2"></app-product-in-cart-my-dat>
+  </div>
+  <div>
+    <app-product-in-cart-silver-dat-calculate-pro
+      *ngIf="component3"
+    ></app-product-in-cart-silver-dat-calculate-pro>
+  </div>
+  <div>
+    <app-product-in-cart-vin-abfrage
+      *ngIf="component4"
+    ></app-product-in-cart-vin-abfrage>
+  </div>
+  <mat-checkbox
+    >Ich habe die Datenschutzvereinbarungen gelesen und bin damit
+    einverstanden</mat-checkbox
+  >
+  <mat-divider></mat-divider>
+  <button class="button triangle" routerLink="/overview-checkout">
+    Angebot annehmen &#x203A;
+  </button>
+</div>

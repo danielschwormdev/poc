@@ -1,0 +1,26 @@
+<div class="card border">
+  <div class="card-header">
+    <h1>SilverDAT calculatePRO</h1>
+    <h1>€ 300,00</h1>
+  </div>
+  <div class="card-content">
+    <h3>Betriebsstätten Lizenznehmer:</h3>
+    <p>{{ silverDATCalculateProData.licenceUser.title }}</p>
+    <p>{{ silverDATCalculateProData.licenceUser.place }}</p>
+    <p>{{ silverDATCalculateProData.licenceUser.phone }}</p>
+    <h3>Ansprechpartner:</h3>
+    <p>
+      {{ silverDATCalculateProData.contactPartner.firstName }}
+      {{ silverDATCalculateProData.contactPartner.lastName }}
+    </p>
+    <p>{{ silverDATCalculateProData.contactPartner.email }}</p>
+
+    <h3>Administrator:</h3>
+    <p>
+      {{ silverDATCalculateProData.administrator.firstName }}
+      {{ silverDATCalculateProData.administrator.lastName }}
+    </p>
+    <p>{{ silverDATCalculateProData.administrator.email }}</p>
+  </div>
+  <p class="extra-info">Datenschutzbedingungen autoglas PLUS &#x203A;</p>
+</div>

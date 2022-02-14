@@ -1,0 +1,70 @@
+<div class="card border">
+  <div class="trash triangle">
+    <mat-icon>delete</mat-icon>
+  </div>
+  <h1 class="card-header">VIN-Abfrage</h1>
+  <div class="card-content">
+    <div class="form-container">
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Firmensitz</mat-label>
+        <input
+          matInput
+          [(ngModel)]="vinAbfrageDetails.companyData.headquarter"
+          (ngModelChange)="
+            setVinAbfrageDetails($event, 'companyData.headquarter')
+          "
+          placeholder="Firmensitz"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>HR-Nr. (optional)</mat-label>
+        <input
+          matInput
+          [(ngModel)]="vinAbfrageDetails.companyData.hrNumber"
+          (ngModelChange)="setVinAbfrageDetails($event, 'companyData.hrNumber')"
+          placeholder="HR-Nr. (optional)"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Steuernummer</mat-label>
+        <input
+          matInput
+          [(ngModel)]="vinAbfrageDetails.companyData.taxNumber"
+          (ngModelChange)="
+            setVinAbfrageDetails($event, 'companyData.taxNumber')
+          "
+          placeholder="Steuernummer"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-container">
+      <mat-checkbox class="form-item"
+        >Handels- bzw. Servicepartner</mat-checkbox
+      >
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Hersteller / Importeur</mat-label>
+        <input
+          matInput
+          [(ngModel)]="vinAbfrageDetails.servicePartner.partnerName"
+          (ngModelChange)="
+            setVinAbfrageDetails($event, 'servicePartner.partnerName')
+          "
+          placeholder="Hersteller / Importeur"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-item">
+        <mat-label>Händler-Nr.</mat-label>
+        <input
+          matInput
+          [(ngModel)]="vinAbfrageDetails.servicePartner.partnerNumber"
+          (ngModelChange)="
+            setVinAbfrageDetails($event, 'servicePartner.partnerNumber')
+          "
+          placeholder="Händler-Nr."
+        />
+      </mat-form-field>
+    </div>
+    <mat-divider></mat-divider>
+    <p class="extra-info">Zusatzinformationen anzeigen</p>
+  </div>
+</div>

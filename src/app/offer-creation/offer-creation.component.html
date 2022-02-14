@@ -1,0 +1,16 @@
+<div class="container">
+  <a routerLink="/customer-registration">&#x2039; Zurück zur Kundenauswahl</a>
+  <h1>Angebotserfassung</h1>
+  <mat-radio-group class="radio-group">
+    <mat-radio-button
+      class="radio-button"
+      *ngFor="let offer of offers"
+      [value]="offer"
+    >
+      {{ offer }}
+    </mat-radio-button>
+  </mat-radio-group>
+  <button class="button triangle" routerLink="/offer-configurator">
+    zum Angebotskonfigurator &#x203A;
+  </button>
+</div>

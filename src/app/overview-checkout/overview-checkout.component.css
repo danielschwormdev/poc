@@ -1,0 +1,42 @@
+.container {
+  max-width: 100%;
+  min-height: 100%;
+  margin: 150px 350px 150px 350px;
+}
+
+a {
+  color: #1b3566;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.card {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.border {
+  border: 1px solid #e0dfdf;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container button:last-of-type {
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+mat-divider {
+  margin-top: 20px;
+}

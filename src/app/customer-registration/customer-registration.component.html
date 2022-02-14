@@ -1,0 +1,145 @@
+<div class="container">
+  <h1>Neukunden anlegen</h1>
+  <h3>Allgemeine Kundendaten:</h3>
+  <section class="radio-button-section">
+    <mat-radio-button
+      class="margin"
+      *ngFor="let customer of customers"
+      [value]="customer"
+    >
+      {{ customer }}
+    </mat-radio-button>
+  </section>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Firmenname</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerDetails.company"
+        [(ngModel)]="customerDetails.customerAddress.companyName"
+        placeholder="Firmenname"
+        [formControl]="companyName"
+      />
+      <mat-error *ngIf="email.invalid">{{
+        getCompanyNameErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Vorname</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerDetails.firstName"
+        placeholder="Inhaber"
+        [formControl]="firstName"
+        required
+      />
+      <mat-error *ngIf="email.invalid">{{
+        getFirstNameErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Nachname</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerDetails.lastName"
+        [(ngModel)]="customerDetails.customerAddress.contactName"
+        placeholder="Inhaber"
+        [formControl]="lastName"
+        required
+      />
+      <mat-error *ngIf="email.invalid">{{
+        getLastNameErrorMessage()
+      }}</mat-error>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Straße</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerAddress.street"
+        placeholder="Straße"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Hausnummer</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerAddress.streetNumber"
+        placeholder="Hausnummer"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>PLZ</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerAddress.zipCode"
+        placeholder="PLZ"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Ort</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerAddress.city"
+        placeholder="Stadt"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefonnummer</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.customerDetails.contactPhone"
+        placeholder="Telefonnummer"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Email-Adresse</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerDetails.email"
+        [(ngModel)]="customerDetails.customerDetails.contactEmail"
+        placeholder="E-Mail-Adresse"
+        [formControl]="email"
+        required
+      />
+      <mat-error *ngIf="email.invalid">{{ getEmailErrorMessage() }}</mat-error>
+    </mat-form-field>
+  </p>
+  <div class="last">
+    <mat-checkbox>Creditreform-Auskunft</mat-checkbox>
+    <button class="button triangle" (click)="addCustomer()">
+      Weiter &#x203A;
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+  <h1>Mit Bestandskunden fortfahren</h1>
+  <div class="existing_customer_section">
+    <mat-form-field appearance="outline">
+      <mat-label>DAT Kundennummer</mat-label>
+      <input
+        matInput
+        [(ngModel)]="customerIdClass"
+        placeholder="DAT Kundennummer"
+      />
+    </mat-form-field>
+    <button class="button triangle" (click)="getCustomerById()">
+      Weiter &#x203A;
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+</div>
